@@ -1,0 +1,37 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+}
+
+.control {
+    background-color: white;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 2px;
+}
+
+#legend {
+    padding: 5px;
+}
+
+#icons {
+    font-size: 18px;
+}
+
+#icons > img {
+    vertical-align: middle;
+}
+
+#citation {
+    font-size: 8px;
+}
+
+#data {
+    display: none;
+    font-size: 18px;
+}

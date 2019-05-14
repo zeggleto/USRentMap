@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>US Rent Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="map"></div>
+    <div class="control" id="title"><h1>U.S Median One Bedroom Rent</h1></div>
+    <div class="control" id="legend">
+        <h2>Map Legend</h2>
+        <div id="icons"><input type="checkbox" id="pink" onclick="toggleMarkers('pink');" checked><img src="img/pink.png"> -$600</div>
+        <div id="icons"><input type="checkbox" id="red" onclick="toggleMarkers('red');" checked><img src="img/red.png"> $600 - $899</div>
+        <div id="icons"><input type="checkbox" id="orange" onclick="toggleMarkers('orange');" checked><img src="img/orange.png"> $900 - $1199</div>
+        <div id="icons"><input type="checkbox" id="yellow" onclick="toggleMarkers('yellow');" checked><img src="img/yellow.png"> $1200 - $1499</div>
+        <div id="icons"><input type="checkbox" id="lightgreen" onclick="toggleMarkers('lightgreen');" checked><img src="img/lightgreen.png"> $1500 - $1999</div>
+        <div id="icons"><input type="checkbox" id="green" onclick="toggleMarkers('green');" checked><img src="img/green.png"> +$2000</div>
+        <br/>
+        <div id="icons">National Median: 
+            <div id="national"></div>
+        </div>
+        <div id="citation">
+            <p>Sources:</p>
+            <p>United States Rent Report -<br/>
+            Apartment List<br/>
+            Chris Salviati -<br/>
+            <a href="https://www.apartmentlist.com/rentonomics/national-rent-data/">National Rent Data</a></p>
+        </div>
+    </div>
+    <div class="control" id="data">
+        Location: <span id="location"></span> <br/>
+        Median Rent: <span id="city"></span> <br/>
+        Median Rent for <span id="state"></span>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYy0DCdICQhFV06WZ77OUCq5bHUGe9YrQ&callback=initMap"
+        async defer></script>
+</body>
+
+</html>
